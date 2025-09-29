@@ -1,14 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 int main()
 {
-	int withdrawl,balance =10000;
-	printf("Enter Amount: \n");
-	scanf("%d",&withdrawl);
-	while(withdrawl>balance){
-		printf("Insufficent amount,Try again: \v");
-		scanf("%d",&withdrawl);
-	}
-	balance-=withdrawl;
-	printf("Successfull,Updated balance %d",balance);
+	char Name[20] = "user";
+	char pass[20] = "1234";
+	char uname[20],upass[20];
+	int flag;
+	do{
+		printf("Username: \n");
+		scanf("%s",uname);
+		printf("Pass: \n");
+		scanf("%s",upass);
+		if(strcmp(pass,upass)==0 && strcmp(Name,uname)==0){
+		flag =1;
+		printf("Welcome");
+	} else
+	printf("Try Again\n");
+	}while(!flag);
 	return 0;
 }
